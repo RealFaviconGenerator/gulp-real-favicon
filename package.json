@@ -1,0 +1,24 @@
+{
+  "name": "gulp-real-favicon",
+  "version": "0.0.1",
+  "description": "Generate a multiplatform favicon with RealFaviconGenerator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RealFaviconGenerator/gulp-real-favicon.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "favicon",
+    "realfavicongenerator"
+  ],
+  "author": "Philippe Bernard <philippe@realfavicongenerator.net> (https://realfavicongenerator.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RealFaviconGenerator/gulp-real-favicon/issues"
+  },
+  "homepage": "https://github.com/RealFaviconGenerator/gulp-real-favicon#readme"
+}
