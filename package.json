@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/RealFaviconGenerator/gulp-real-favicon/issues"
   },
-  "homepage": "https://github.com/RealFaviconGenerator/gulp-real-favicon#readme"
+  "homepage": "https://github.com/RealFaviconGenerator/gulp-real-favicon#readme",
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "gulp-util": "^3.0.7",
+    "mocha": "^2.3.3",
+    "rimraf": "^2.4.3"
+  },
+  "dependencies": {
+    "rfg-api": "file:../rfg-api"
+  }
 }
