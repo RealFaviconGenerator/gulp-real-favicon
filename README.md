@@ -8,11 +8,11 @@ Like Gulp? Prefer code over configuration? Well, you won't write much code with 
 
 - Go to [RealFaviconGenerator](http://realfavicongenerator.net/), submit your original image and craft your icons:
 
-![RealFaviconGenerator's favicon editor](https://cloud.githubusercontent.com/assets/423852/11017585/3bfa6f4e-85a4-11e5-9cbe-87bde6586cf1.png)
+![RealFaviconGenerator's favicon editor](https://cloud.githubusercontent.com/assets/423852/11017637/82ea6200-85a5-11e5-85e4-c30ac76c730f.png)
 
 - On the result page, click the Gulp tab. Follow the instructions to setup your favicon in your Gulp project:
 
-![Result page, Gulp tab](https://cloud.githubusercontent.com/assets/423852/11017587/448856bc-85a4-11e5-8a55-f92508568f6f.png)
+![Result page, Gulp tab](https://cloud.githubusercontent.com/assets/423852/11017638/85afda1a-85a5-11e5-948c-8fe3a0f5d6d2.png)
 
 Et voilà! Your favicon is up and ready.
 
