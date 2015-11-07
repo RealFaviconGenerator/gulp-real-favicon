@@ -3,6 +3,7 @@
 var rfg = require('rfg-api').init();
 var gutil = require('gulp-util');
 var fs = require('fs');
+var through = require('through2');
 
 var API_KEY = 'eabf77c98d6bd1eea81fb58be7895c42dafc2b21';
 var PLUGIN_NAME = 'gulp-real-favicon';
@@ -34,7 +35,22 @@ module.exports = {
     });
   },
 
-  injectFaviconMarkups: function() {
-    console.log("TODO: Inject");
+  injectFaviconMarkups: function(htmlMarkups) {
+    var stream = through.obj(function(file, enc, cb) {
+      if (file.isBuffer()) {
+        rfg.injectFaviconMarkups(file.contents, htmlMarkups, {}, function(err, html) {
+          file.contents = new Buffer(html);
+          stream.push(file);
+          cb();
+        });
+      }
+
+      if (file.isStream()) {
+        this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Stream not supported'));
+      }
+    });
+
+    // returning the file stream
+    return stream;
   }
 }
