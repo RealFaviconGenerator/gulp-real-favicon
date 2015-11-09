@@ -52,5 +52,29 @@ module.exports = {
 
     // returning the file stream
     return stream;
+  },
+
+  checkForUpdates: function(currentVersion, callback) {
+    rfg.changeLog(currentVersion, function(err, versions) {
+      if ((err !== undefined) && (callback !== undefined)) {
+        callback(err, versions);
+        return;
+      }
+
+      if (versions.length > 0) {
+        var url = 'https://realfavicongenerator.net/change_log?since=' + currentVersion;
+        // Yep, override err so callback receives it as an error
+        err = "A new version is available for your favicon. Visit " + url + " for more information.";
+
+        gutil.log(gutil.colors.red(err));
+      }
+      else {
+        gutil.log(gutil.colors.green("Your favicon is up-to-date. Hurray!"));
+      }
+
+      if (callback !== undefined) {
+        callback(err, versions);
+      }
+    });
   }
 }
