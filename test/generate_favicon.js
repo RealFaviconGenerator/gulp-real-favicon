@@ -27,7 +27,7 @@ describe('generateFavicon', function() {
       design: {
         desktopBrowser: {}
       },
-      markupFile: path.join(__dirname, 'output', 'markups.html'),
+      markupFile: path.join(__dirname, 'output', 'faviconInfo.json'),
       dest: path.join(__dirname, 'output')
     }, function(err) {
       assert.equal(err, undefined);
@@ -37,12 +37,13 @@ describe('generateFavicon', function() {
       assert(! fs.existsSync(path.join(__dirname, 'output', 'apple-touch-icon.png')));
 
       // Make sure some code is store in the markup file
-      var mf = path.join(__dirname, 'output', 'markups.html');
+      var mf = path.join(__dirname, 'output', 'faviconInfo.json');
       assert(fs.existsSync(mf));
-      var markups = fs.readFileSync(mf);
-      assert(markups);
-      assert(markups.length > 230);
-      assert(markups.length < 400);
+      var faviconInfo = JSON.parse(fs.readFileSync(mf));
+      assert(faviconInfo);
+      assert(faviconInfo.favicon.html_code);
+      assert(faviconInfo.favicon.html_code.length > 230);
+      assert(faviconInfo.favicon.html_code.length < 400);
 
       done();
     });
@@ -66,7 +67,7 @@ describe('generateFavicon', function() {
       versioning: {
         paramName: 'The_Param'
       },
-      markupFile: path.join(__dirname, 'output', 'markups.html'),
+      markupFile: path.join(__dirname, 'output', 'faviconInfo.json'),
       dest: path.join(__dirname, 'output')
     }, function(err) {
       assert.equal(err, undefined);
@@ -76,12 +77,13 @@ describe('generateFavicon', function() {
       assert(! fs.existsSync(path.join(__dirname, 'output', 'favicon.ico')));
 
       // Make sure some code is store in the markup file
-      var mf = path.join(__dirname, 'output', 'markups.html');
+      var mf = path.join(__dirname, 'output', 'faviconInfo.json');
       assert(fs.existsSync(mf));
-      var markups = fs.readFileSync(mf);
-      assert(markups);
-      assert(markups.length > 230);
-      assert(markups.length < 400);
+      var faviconInfo = JSON.parse(fs.readFileSync(mf));
+      assert(faviconInfo);
+      assert(faviconInfo.favicon.html_code);
+      assert(faviconInfo.favicon.html_code.length > 230);
+      assert(faviconInfo.favicon.html_code.length < 400);
 
       done();
     });

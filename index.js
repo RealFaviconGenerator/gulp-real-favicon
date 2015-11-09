@@ -27,7 +27,7 @@ module.exports = {
         });
       }
 
-      fs.writeFileSync(params.markupFile, data.favicon.html_code);
+      fs.writeFileSync(params.markupFile, JSON.stringify(data));
 
       if (callback !== undefined) {
         callback(err);
