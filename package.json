@@ -1,6 +1,6 @@
 {
   "name": "gulp-real-favicon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generate a multiplatform favicon with RealFaviconGenerator",
   "main": "index.js",
   "scripts": {
