@@ -21,6 +21,11 @@ This project has mocha tests. If you contribute, make sure the existing tests st
 
 ## Release History
 
+### 0.2.0
+
+- `escapeJSONSpecialChars` added.
+- `injectFaviconMarkups` supports options.
+
 ### 0.1.0
 
 - Save the entire favicon data, not only the markups.

@@ -35,10 +35,11 @@ module.exports = {
     });
   },
 
-  injectFaviconMarkups: function(htmlMarkups) {
+  injectFaviconMarkups: function(htmlMarkups, options) {
     var stream = through.obj(function(file, enc, cb) {
       if (file.isBuffer()) {
-        rfg.injectFaviconMarkups(file.contents, htmlMarkups, {}, function(err, html) {
+        rfg.injectFaviconMarkups(file.contents, htmlMarkups,
+          (typeof options !== undefined) ? options : {}, function(err, html) {
           file.contents = new Buffer(html);
           stream.push(file);
           cb();
@@ -76,5 +77,9 @@ module.exports = {
         callback(err, versions);
       }
     });
+  },
+
+  escapeJSONSpecialChars: function(json) {
+    return rfg.escapeJSONSpecialChars(json);
   }
 }

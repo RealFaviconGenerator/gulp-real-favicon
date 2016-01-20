@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "gulp-util": "^3.0.7",
-    "rfg-api": "^0.1.1",
+    "rfg-api": "^0.1.7",
     "through2": "^2.0.0"
   }
 }
