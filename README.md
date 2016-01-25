@@ -6,7 +6,7 @@ Generate a multiplatform favicon with [RealFaviconGenerator](http://realfavicong
 
 Like Gulp? Prefer code over configuration? Well, you won't write much code with this plugin. Instead:
 
-- Go to [RealFaviconGenerator](http://realfavicongenerator.net/), submit your original image and craft your icons:
+- Go to [RealFaviconGenerator](http://realfavicongenerator.net/favicon/gulp), submit your original image and craft your icons:
 
 ![RealFaviconGenerator's favicon editor](https://cloud.githubusercontent.com/assets/423852/11017637/82ea6200-85a5-11e5-85e4-c30ac76c730f.png)
 
@@ -20,6 +20,10 @@ Et voilà! Your favicon is up and ready.
 This project has mocha tests. If you contribute, make sure the existing tests still run and add your own ones!
 
 ## Release History
+
+### 0.2.1
+
+- Documentation update: link to the dedicated Gulp page.
 
 ### 0.2.0
 
