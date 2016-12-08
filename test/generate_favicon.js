@@ -50,6 +50,8 @@ describe('generateFavicon', function() {
   });
 
   it('should invoke the API settings and versioning', function(done) {
+    this.timeout(15000);
+
     realFavicon.generateFavicon({
       masterPicture: path.join(__dirname, 'fixtures', 'sample_picture_1.png'),
       iconsPath: '/some/path',
