@@ -42,7 +42,7 @@ describe('generateFavicon', function() {
       var faviconInfo = JSON.parse(fs.readFileSync(mf));
       assert(faviconInfo);
       assert(faviconInfo.favicon.html_code);
-      assert(faviconInfo.favicon.html_code.length > 230);
+      assert(faviconInfo.favicon.html_code.length > 200);
       assert(faviconInfo.favicon.html_code.length < 400);
 
       done();
