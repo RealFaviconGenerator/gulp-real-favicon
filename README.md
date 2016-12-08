@@ -21,6 +21,10 @@ This project has mocha tests. If you contribute, make sure the existing tests st
 
 ## Release History
 
+### 0.2.2
+
+- Use latest rfg-api library.
+
 ### 0.2.1
 
 - Documentation update: link to the dedicated Gulp page.
