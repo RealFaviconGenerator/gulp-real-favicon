@@ -1,7 +1,9 @@
 'use strict';
 
 var rfg = require('rfg-api').init();
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
+var colors = require('ansi-colors');
+var fancyLog = require('fancy-log');
 var fs = require('fs');
 var through = require('through2');
 
@@ -21,7 +23,7 @@ module.exports = {
 
     rfg.generateFavicon(request, params.dest, function(err, data) {
       if (err) {
-        throw new gutil.PluginError({
+        throw new PluginError({
           plugin: PLUGIN_NAME,
           message: err
         });
@@ -47,7 +49,7 @@ module.exports = {
       }
 
       if (file.isStream()) {
-        this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Stream not supported'));
+        this.emit('error', new PluginError(PLUGIN_NAME, 'Stream not supported'));
       }
     });
 
@@ -67,10 +69,10 @@ module.exports = {
         // Yep, override err so callback receives it as an error
         err = "A new version is available for your favicon. Visit " + url + " for more information.";
 
-        gutil.log(gutil.colors.red(err));
+        fancyLog(colors.red(err));
       }
       else {
-        gutil.log(gutil.colors.green("Your favicon is up-to-date. Hurray!"));
+        fancyLog(colors.green("Your favicon is up-to-date. Hurray!"));
       }
 
       if (callback !== undefined) {
