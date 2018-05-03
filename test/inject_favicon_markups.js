@@ -5,9 +5,10 @@ var realFavicon = require('../');
 var assert = require('assert');
 var path = require('path');
 var fs = require("fs");
+var Vinyl = require('vinyl')
 
 function createFile(fileName) {
-  var file = new File({
+  var file = new Vinyl({
     path: path.join(__dirname, 'fixtures', fileName),
     cwd: path.join(__dirname),
     base: path.join(__dirname, 'fixtures'),

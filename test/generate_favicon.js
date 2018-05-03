@@ -1,6 +1,5 @@
 'use strict';
 
-var gulp = require('gulp');
 var realFavicon = require('../');
 var assert = require('assert');
 var path = require('path');
