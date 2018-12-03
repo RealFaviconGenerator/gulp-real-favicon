@@ -7,7 +7,7 @@ var fs = require("fs");
 var rimraf = require('rimraf');
 
 describe('generateFavicon', function() {
-  this.timeout(5000);
+  this.timeout(15000);
 
   beforeEach(function() {
     if (! fs.existsSync(path.join(__dirname, 'output'))) {
